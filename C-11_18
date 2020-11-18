@@ -1,0 +1,8 @@
+#include <stdio.h>
+inta = 9;
+int main()
+{
+	int a = 7;
+	printf("%d\n", a);//就近原则
+	return 0;
+}
