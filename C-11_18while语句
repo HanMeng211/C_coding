@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	printf("开始循环\n");
+	int A = 0;
+		while (A <= 20000)
+		{
+			A += 1;//A += 1相当于A = A+1
+			printf("循环第%d次\n", A);
+		}
+		printf("循环结束\n");
+	return 0;
+}
