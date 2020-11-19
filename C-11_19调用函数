@@ -1,0 +1,16 @@
+void add()
+{
+	int num1, num2;
+	
+	scanf("%d%d",&num1,&num2);
+	int ret = num1 + num2;
+	printf("%d + %d = %d\n",num1,num2,ret);
+}
+
+int main()
+{
+	 add();
+   add();
+	 add();
+	return 0;
+}
