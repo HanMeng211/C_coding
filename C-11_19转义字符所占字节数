@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main()
+{
+	printf("%d\n", strlen("abcdef"));//strlen算字符串长度（从开始位置到遇到\0为止，但不包含\0）
+	printf("%d\n", strlen("c:\test\328\test.c"));//\328算两个字节
+	return 0;
+}
