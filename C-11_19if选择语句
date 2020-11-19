@@ -3,7 +3,7 @@ int main()
 {
 	int  a = 0;
 	printf("你会去敲代码吗？（选择1 or 0）\n");
-	scanf_s("%d", &a);
+	scanf_s("%d", &a);               //调用a
 	if (a == 1)
 	{
 		printf("坚持，你会有好offer\n");
