@@ -1,0 +1,7 @@
+typedef int ab;
+int main()
+{
+	ab num = 0;//ab相当于int，只是给int改了个名字叫ab
+	printf("%d\n", sizeof(ab));
+	return 0;
+}
