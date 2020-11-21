@@ -1,0 +1,44 @@
+定义数组，未初始化，里面的是随机的
+#include<stdio.h>
+int main()
+{
+	int arr1[10];//定义数组，未初始化，里面的是随机的
+	int i = 0;
+	while (i < 10)
+	{
+		printf("%d\n", arr1[i]);
+		i += 1;
+	}
+	
+	return 0;
+}
+
+
+
+
+定义数组，初始化前5个，后面没给的默认是0
+#include<stdio.h>
+int main()
+{
+	int arr2[10] = {1,2,3,4,5};//定义数组，初始化前5个，后面没给的默认是0
+	int i = 0;
+	while (i < 10)
+	{
+		printf("%d\n", arr2[i]);
+		i += 1;
+	}
+
+	return 0;
+}
+
+
+
+
+数组的下标是从0开始的arr[10]可以访问的位置是arr[0]-arr[9]
+#include<stdio.h>
+int main()
+{
+	int arr2[10] = { 1, 2, 3, 4, 5 };
+	printf("%d\n", arr2[0]);//数组的下标是从0开始的arr[10]可以访问的位置是arr[0]-arr[9]
+	return 0;
+}
