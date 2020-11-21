@@ -1,0 +1,23 @@
+static int j = 0;      //用static修饰全局变量    //修饰全局变量，改变的是变量的可见性（只在定义的文件可以用）；
+
+
+
+
+
+#include<stdio.h>
+extern int j;    //调用j外部的
+void test()
+{
+	static int a = 0; //a是局部的
+	++a;
+	printf("局部static a=%d\n",a);
+	++j;
+	printf("全局static j=%d\n", j);    //因为上面用static修饰了j所以j在此不可用
+}
+int main()
+{
+	test();
+	test();
+	test();
+	return 0;
+}
