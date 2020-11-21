@@ -2,19 +2,9 @@
 int main()
 {
 	int i = 1;
-	int x = ++i;        //++i返回之后的数，i++返回加之前的数字;
-	printf("x=%d\n", x);
+	int k = ++i;
+	i = 1;
+	int j = i++;                   //++i:i先++表达式返回++之后的值     i++:表达式返回++以前的值，i再++
+	printf("k=%d\nj=%d\n", k, j);
 	return 0;
-}     //运行结果是x=2
-
-
-
-
-#include<stdio.h>
-int main()
-{
-	int i = 1;
-	int x = i++;
-	printf("x=%d\n", x);
-	return 0;
-}      //运行结果是x=1
+}
