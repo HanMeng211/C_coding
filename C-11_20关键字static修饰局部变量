@@ -6,7 +6,6 @@ void test()
 	printf("%d\n", i);
 
 }
-
 int main()
 {
 	test();
@@ -22,12 +21,11 @@ int main()
 #include<stdio.h>
 void test()
 {
-	static int i = 0;     //static修饰局部变量，改变局部变量的生命周期——整个程序运行期间
+	static int i = 0;    // 改变局部变量的生命周期（变成了整个程序）但不改变局部变量的作用域
 	++i;
 	printf("%d\n", i);
 
 }
-
 int main()
 {
 	test();
