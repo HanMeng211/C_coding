@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	printf("请输入一个数n\n");
+	int n;
+	scanf_s("%d", &n);
+	int a = 1;
+	int ret = 1;
+	while (a <= n)
+	{
+		ret *= a;
+		++a;
+	}
+	printf("n！=%u\n",ret);
+	return 0;
+}
