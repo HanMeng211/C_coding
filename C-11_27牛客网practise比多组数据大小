@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int a;
-    int b;
-    scanf("%d %d",&a,&b);
+    int a,b;
+    while (scanf("%d %d",&a,&b) != EOF)
+    {
     if(a>b)
     {
         printf("%d>%d\n",a,b);
@@ -15,6 +15,7 @@ int main()
      else
     {
         printf("%d=%d\n",a,b);
+    }
     }
     return 0;
 }
