@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+	for (int a = 100; a <= 200; a++)
+	{
+		for (int j = 2; j < a; j++)
+		{
+		
+		if (a % j == 0)        //判断是否是素数，不是直接跳出，是进入下一步
+		{
+			break;
+		}
+		if (a == j + 1)        //到a前一个数没有一个能整除，输出
+		{
+			printf(" %d", a);
+		}
+		}
+	}
+	return 0;
+}
