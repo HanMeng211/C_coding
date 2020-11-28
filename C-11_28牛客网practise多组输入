@@ -6,7 +6,7 @@ int main()
     {
     if(a >= 90 && a <= 100)
     {
-        printf("Perfect");
+        printf("Perfect\n");
     }
     }
     return 0;
