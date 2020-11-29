@@ -1,8 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
 void game()
 {
-	int x = rand() % 100;
+	srand((unsigned int)time(NULL));    //srand((time(NULL))设计一个随机种子，每次运行都能保证随机种子不同
+	int x = rand() % 100;       //100以内的随机值；rand()函数可以用来产生随机数，但这不是真正意义上的随机数，是一个伪随机数
 	int y;
 	while (1)
 	{
@@ -17,10 +19,10 @@ void game()
 		}
 		else
 		{
-             printf("恭喜你，猜对了\n");
-		break;
+			printf("恭喜你，猜对了\n");
+			break;
 		}
-		
+
 	}
 }
 void menu()
@@ -32,9 +34,9 @@ void menu()
 }
 int main()
 {
-	age2:
+age2:
 	menu();
-	age1:
+age1:
 	printf("请输选择\n");
 	int a;
 	scanf_s("%d", &a);
@@ -48,7 +50,7 @@ int main()
 	case 0:
 		break;
 	default:
-			printf("选择错误请重新输入！\n");
-			goto age1;
+		printf("选择错误请重新输入！\n");
+		goto age1;
 	}
 }
