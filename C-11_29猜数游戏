@@ -6,7 +6,7 @@ void game()
 	srand((unsigned int)time(NULL));    //srand((time(NULL))设计一个随机种子，每次运行都能保证随机种子不同
 	int x = rand() % 100;       //100以内的随机值；rand()函数可以用来产生随机数，但这不是真正意义上的随机数，是一个伪随机数
 	int y;
-	while (1)
+	while (1)                     //判断输入的数和要猜的输大小
 	{
 		scanf_s("%d", &y);
 		if (x > y)
@@ -25,7 +25,7 @@ void game()
 
 	}
 }
-void menu()
+void menu()                     //目录
 {
 	printf("********************************\n");
 	printf("**********1.继续玩**************\n");
