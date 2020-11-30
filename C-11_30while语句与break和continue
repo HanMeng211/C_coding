@@ -1,0 +1,63 @@
+//while语句与break
+#include<stdio.h>
+int main()
+{
+	int a = 1;
+	while (a < 10)
+	{
+		if (a == 5)
+		{
+			break;
+		}
+		printf("%d\n", a);
+		a++;
+	}
+	return 0;
+}
+//在while循环中只要遇到break，就停止后期所有的循环，直接终止循环；（while中的break是用于终止循环的）
+
+
+
+
+
+//while语句与continue
+#include<stdio.h>
+int main()
+{
+	int a = 1;      
+	while (a < 10)    //1
+	{
+		if (a == 5)   //2
+		{
+			continue;  //3
+		}
+		printf("%d\n", a);
+		a++;
+	}
+	return 0;
+}
+//如上代码运行到4后面陷入了死循环当a=5时运行顺序为如上注释1-2-3-1-2-3一直死循环，因为a=5 continue直接回到while继续循环，到不了a++所以a一直等于5，所以陷入死循环
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	int a = 0;
+	while (a < 10)
+	{
+		a++;
+		if (a == 5)
+		{
+			continue;
+		}
+		printf("%d\n", a);
+
+	}
+	return 0;
+}
+//continue是用于终止本次循环，本次循环continue后面的代码不会再执行，而是直接跳转到while语句的判断部分；进入下一次循环的入口判断
