@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+	int i = 0;
+	for (i = 0; i<10; i++)
+	{
+		if (i = 5)      //此处是将5赋值给i，所以i每次都是5死循环打印5
+			printf("%d ", i);
+	}
+	return 0;
+}
