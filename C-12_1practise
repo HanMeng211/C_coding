@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+	int x = 3;
+	int y = 3;
+	switch (x % 2) {       //相当于switch(1)
+	case 1:
+		switch (y)           //switch(3)
+		{
+		case 0:
+			printf("first");
+		case 1:
+			printf("second");
+			break;
+		default: printf("hello"); //打印
+		}
+	case 2:                     //因为上面没有break和continue所以继续执行下面的语句
+		printf("third");
+	}
+	return 0;                   //所以最后打印的是hellothird
+}
