@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+	double sum1 = 0,sum2 = 0,sum;
+	int n;
+	for (n = 1; n <= 100; n++)
+	{
+		if (n % 2 == 1 || n % 2 == 0) //奇数
+		{
+			sum1 += 1 / n;
+		}
+		if (n % 2 != 1 || n == 2)  //偶数
+		{
+			sum2 += (-1) / n;
+		}
+	}
+	printf("%lf\n",sum = sum1 + sum2);
+	return 0;
+}
