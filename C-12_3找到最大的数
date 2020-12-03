@@ -1,26 +1,14 @@
 #include<stdio.h>
+ 
+ 
 int main()
 {
-	int a, b, c, d;
-	scanf_s("%d %d %d %d", &a, &b, &c, &d);
-	if (a > b)
-	{
-		int tem = a;
-		a = b;
-		b = tem;
-		if (c > b)
-		{
-			int tem = c;
-			c = b;
-			b = tem;
-			if (d > b)
-			{
-				int tem = d;
-				d = b;
-				b = tem;
-			}
-		}
-	}
-	printf("%d\n", b);
-	return 0;
+    int a,b,c,d;
+    scanf("%d %d %d %d",&a,&b,&c,&d);
+    int max1=a>b?a:b;
+    int max2=c>d?c:d;
+    int max = max1>max2?max1:max2;
+    printf("%d\n",max);
+     
+    return 0;
 }
