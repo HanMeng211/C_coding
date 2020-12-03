@@ -1,0 +1,26 @@
+#include<stdio.h>
+int PrimeNumber(int x)
+{
+	int n;
+	for (n = 2; n < x; ++n)
+	{
+		if (x % n == 0)
+		{
+			return 0;
+		}
+	}
+	return 1;
+}
+int main()
+{
+	int y;
+	for (y = 100; y <= 200; ++y)
+	{
+		if (PrimeNumber(y))
+		{
+			printf("%d ", y);
+		}	
+	}
+	printf("\n");
+	return 0;
+}
