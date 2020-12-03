@@ -1,0 +1,29 @@
+//传址调用  将a,b的地址传给px,py
+#include<stdio.h>
+void swap(int* px, int* py)
+{
+	int tem = *px;
+	*px = *py;
+	*py = tem;
+}
+int main()
+{
+	int a, b, c;
+	scanf_s("%d %d %d", &a, &b, &c);
+	//把最大的给c
+	if (a > b)
+	{
+		swap(&a, &b);
+	}
+	if (b > c)
+	{
+		swap(&b, &c);
+	}
+	//把最小的给a
+	if (a > b)
+	{
+		swap(&a, &b);
+	}
+	printf("%d %d %d\n", a, b, c);
+	return 0;
+}
