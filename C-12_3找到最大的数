@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	int a, b, c, d;
+	scanf_s("%d %d %d %d", &a, &b, &c, &d);
+	if (a > b)
+	{
+		int tem = a;
+		a = b;
+		b = tem;
+		if (c > b)
+		{
+			int tem = c;
+			c = b;
+			b = tem;
+			if (d > b)
+			{
+				int tem = d;
+				d = b;
+				b = tem;
+			}
+		}
+	}
+	printf("%d\n", b);
+	return 0;
+}
