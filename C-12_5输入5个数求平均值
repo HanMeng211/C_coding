@@ -7,3 +7,23 @@ int main()
     printf("%.1f\n",Average);
     return 0;
 }
+
+
+
+
+
+//用数组求
+#include<stdio.h>
+int main()
+{
+	int a[5];
+	int i;
+	double Average = 0;
+	for (i = 0; i <= 4;i++)
+	{
+		scanf_s("%d", &a[i]);
+		Average = Average + a[i] / 5.0;
+	}
+	printf("%.1lf\n", Average);
+	return 0;
+}
