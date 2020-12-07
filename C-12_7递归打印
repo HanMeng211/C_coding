@@ -1,0 +1,19 @@
+#include<stdio.h>
+void Printf(int num)
+{
+	if (num == 0)
+	{
+		return;
+	}
+	Printf(num / 10);
+	printf("%d ",num % 10);  //后打印
+	
+}
+int main()
+{
+	int a;
+	scanf_s("%d", &a);
+	Printf(a);
+	printf("\n");
+	return 0;
+}
