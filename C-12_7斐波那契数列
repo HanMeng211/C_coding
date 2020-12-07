@@ -1,0 +1,50 @@
+//用递归做法如下
+#include<stdio.h>
+int fib(int n)
+{
+	if (n < 2)
+	{
+		return n;
+	}
+	return fib(n - 1) + fib(n - 2);
+}
+int main()
+{
+	int x = 10;
+	printf("%d\n", fib(x));
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+//用循环算法如下
+#include<stdio.h>
+unsigned long long fib1(int n)
+{
+	if (n < 2)
+	{
+		return n;
+	}
+	int f0 = 0, f1 = 1, f2;
+	int i = 2;
+	while (i <= n)    //i等于几算的是第几项
+	{
+		f2 = f1 + f0;
+		f0 = f1;
+		f1 = f2;
+		++i;
+	}
+	return f2;
+}
+int main()
+{
+	int x = 10;
+	printf("%lld\n", fib1(x));
+	return 0;
+}
