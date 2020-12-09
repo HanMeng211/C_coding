@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+	int a = 22,b = 88;
+	a = a ^ b;
+	b = a ^ b;   //a ^ b ^ b = a 
+	a = a ^ b;   //a ^ b ^ a = b
+	printf("a=%d b=%d\n", a, b);
+	return 0;
+}
