@@ -14,10 +14,10 @@ void BubbleSort(int* p, int n) //n控制数组的大小
 			int tem = p[i];
 			p[i] = p[i - 1];
 			p[i - 1] = tem;
-			flag = 1;          //如果有交换返回1
+			flag = 1;          //如果有交换flag等于1
 		}
 	}
-		if (flag == 0)         //如果没有交换说明已经满足左边的数小于右边的数
+		if (flag == 0)         //如果没有交换说明已经满足左边的数小于右边的数，直接结束
 		{
 			break;
 		}
