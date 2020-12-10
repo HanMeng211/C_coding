@@ -1,0 +1,48 @@
+//方法一:使用按位与判断是否为1
+#include<stdio.h>
+int CountBitNum(unsigned int x)
+{
+	int count = 0;
+	for (int i = 1; i <= 32; i++)
+	{
+		if ((x & 1) == 1)
+	{
+		count += 1;
+	}
+		x >>= 1;
+	}
+	return count;
+}
+int main()
+{
+	printf("%d\n", CountBitNum(0xFFFFFFFF));
+	printf("%d\n", CountBitNum(1));
+	printf("%d\n", CountBitNum(123));
+	return 0;
+}
+
+
+
+
+//方法二:使用%判断是否为1
+#include<stdio.h>
+int CountBitNum(unsigned int x)
+{
+	int count = 0;     //计数
+	for (int i = 0; i < 32; ++i)   //控制循环的次数
+	{
+		if (x % 2 == 1)
+		{
+			count += 1;
+		}
+		x >>= 1;      //右移一位再赋值给x继续循环
+	}
+	return count;
+}
+int main()
+{
+	printf("%d\n", CountBitNum(0xFFFFFFFF));
+	printf("%d\n", CountBitNum(1));
+	printf("%d\n", CountBitNum(123));
+	return 0;
+}
