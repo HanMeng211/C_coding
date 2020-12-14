@@ -1,4 +1,4 @@
-//逻辑或
+//逻辑或   有真为真
 #include<stdio.h>
 int main()
 {
@@ -12,7 +12,7 @@ int main()
 
 
 
-//逻辑与
+//逻辑与    有假为假
 #include<stdio.h>
 int main()
 {
