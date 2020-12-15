@@ -1,0 +1,20 @@
+#include<stdio.h>
+int Sum(int a)
+{
+	int sum = 0;
+	int i = 0;     //项
+	int tem = 0;   //每项的值
+	for (i = 0; i < 5; i++)
+	{
+		tem = tem * 10 + a;
+		sum += tem;
+	}
+	return sum;
+}
+int main()
+{
+	int x;
+	scanf_s("%d", &x);
+	printf("%d\n", Sum(x));
+	return 0;
+}
