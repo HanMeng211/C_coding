@@ -1,0 +1,16 @@
+#include<stdio.h>
+int DigitSum(int n)
+{
+	if (n < 10)
+	{
+		return n;
+	}
+	return DigitSum(n % 10) + DigitSum(n / 10);
+}
+int main()
+{
+	int p;
+	scanf_s("%d", &p);
+	printf("%d\n", DigitSum(p));
+	return 0;
+}
