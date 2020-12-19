@@ -1,0 +1,41 @@
+//递归
+#include<stdio.h>
+int MyPow(int n, int k)
+{
+	if (k == 0)
+	{
+		return 1;
+	}
+	return MyPow(n, k - 1) * n;
+}
+int main()
+{
+	int n, k;
+	scanf_s("%d %d", &n, &k);
+	printf("%d\n", MyPow(n, k));
+	return 0;
+}
+
+
+
+
+//非递归
+#include<stdio.h>
+int MyPow(int n, int k)
+{
+	int i = 1;
+	int num = 1;
+	while (i <= k)
+	{
+		num = num * n;
+		++i;
+	}
+	return num;
+}
+int main()
+{
+	int n, k;
+	scanf_s("%d %d", &n, &k);
+	printf("%d\n", MyPow(n, k));
+	return 0;
+}
