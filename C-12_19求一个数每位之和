@@ -1,0 +1,42 @@
+//递归
+#include<stdio.h>
+int DigitSum(int x)
+{
+	if (x < 10)
+	{
+		return x;
+	}
+	return DigitSum(x / 10) + (x % 10);
+}
+int main()
+{
+	int a;
+	scanf_s("%d", &a);
+	printf("%d\n", DigitSum(a));
+	return 0;
+}
+
+
+
+
+//非递归
+#include<stdio.h>
+int DigitSum(int x)
+{
+	int sum = 0;
+	//当只剩一位时/10为0结束循环
+	while (x > 0)
+	{
+		int x1 = x % 10;
+		sum += x1;
+		x = x / 10;
+	}
+	return sum;
+}
+int main()
+{
+	int a;
+	scanf_s("%d", &a);
+	printf("%d\n", DigitSum(a));
+	return 0;
+}
