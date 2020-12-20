@@ -1,0 +1,13 @@
+#include<stdio.h>
+int GetNum(int x,int y)
+{
+    int sum = x + y;
+    return sum % 100;
+}
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    printf("%d\n",GetNum(a,b));
+    return 0;
+}
