@@ -1,0 +1,23 @@
+#include<stdio.h>
+int JudgmentMachine()
+{
+	int a = 1;
+	char val = a; //发生截断
+	if (val = '0x01')
+	{
+		return 1;
+	}
+	return 0;
+}
+int main()
+{
+	if (JudgmentMachine())
+	{
+		printf("小端\n");
+	}
+	else
+	{
+		printf("大端\n");
+	}
+	return 0;
+}
