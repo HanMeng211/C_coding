@@ -1,0 +1,20 @@
+#include<stdio.h>
+int GetBottle(int x)
+{
+	int buy = x;
+	int sum = buy;
+	while (x > 1)
+	{
+		x = x / 2;
+		sum += x;
+	}
+	return sum;
+}
+
+int main()
+{
+	int a;
+	scanf_s("%d", &a);
+	printf("%d\n", GetBottle(a));
+	return 0;
+}
