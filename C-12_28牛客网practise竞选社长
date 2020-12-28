@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+	char x;
+	int countA = 0, countB = 0;
+	while (scanf_s("%c", &x) != EOF)
+	{
+		if (x == 'A')
+		{
+			++countA;
+		}
+		else if (x == 'B')
+		{
+			++countB;
+		}
+		else
+		break;
+	}
+	printf("A=%d\n", countA);
+	printf("B=%d\n", countB);
+	if (countA > countB)
+	{
+		printf("A\n");
+	}
+	else if (countA < countB)
+	{
+		printf("B\n");
+	}
+	else
+	{
+		printf("E\n");
+	}
+	return 0;
+}
