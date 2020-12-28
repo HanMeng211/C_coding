@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int n,h,m,ret;
+    again:
+    scanf("%d %d %d",&n,&h,&m);
+    if(m <= n * h)
+    {
+        ret = n - (m / h) - (m % h);
+    }
+    else
+    {
+        goto again;
+    }
+    printf("%d\n",ret);
+    return 0;
+}
