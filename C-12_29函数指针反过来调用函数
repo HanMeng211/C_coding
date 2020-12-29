@@ -1,0 +1,13 @@
+#include<stdio.h>
+void test()
+{
+	printf("hehe\n");
+}
+int main()
+{
+	void(*pfunc1)() = test;
+	void(*pfunc2)() = &test;
+	(*pfunc1)();
+	pfunc1();
+	return 0;
+}
