@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<math.h>
+void BMI(int wigh,float high)
+{
+    float BMI = wigh / pow(high,2);
+        if(BMI > 18.5 && BMI < 23.9)
+        {
+            printf("Normal\n");
+        }
+    else
+    {
+        printf("Abnormal\n");
+    }
+}
+int main()
+{
+    int wigh;
+    float high;
+    scanf("%d %f",&wigh,&high);
+    BMI(wigh,high);
+    return 0;
+}
