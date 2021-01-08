@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int num;
+	while (scanf_s("%d", &num) != EOF)
+	{
+		for (int i = 1; i <= num; i++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
