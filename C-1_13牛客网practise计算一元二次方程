@@ -1,0 +1,38 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	double a, b, c;
+	while (scanf("%f %f %f", &a, &b, &c) != EOF)
+	{
+		double dt = pow(b, 2) - 4 * a * c;
+		if (a == 0)
+		{
+			printf("Not quadratic equation");
+		}
+		else
+		{
+			if (dt == 0)//△=0
+			{
+				double x1 = (-b - sqrt(dt)) / (2 * a);
+				double x2 = (-b + sqrt(dt)) / (2 * a);
+				printf("x1=x2=%.2f", x1);
+			}
+			else if (dt > 0)//△>0
+			{
+				double x1 = (-b - sqrt(dt)) / (2 * a);
+				double x2 = (-b + sqrt(dt)) / (2 * a);
+				printf("x1=%.2f;x2=%.2f", x1, x2);
+			}
+			else//△<0
+			{
+				double real = (-b) / (2 * a);//实部
+				double imaginary = sqrt(-dt) / (2 * a);//虚部
+				printf("x1=%.2f-%.2fi;x2=%.2f+%.2fi", real, imaginary, real, imaginary);
+			}
+		}
+		printf("\n");
+	}
+	return 0;
+}
