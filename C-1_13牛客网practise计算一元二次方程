@@ -3,7 +3,7 @@
 #include<math.h>
 int main()
 {
-	double a, b, c;
+	float a, b, c;
 	while (scanf("%f %f %f", &a, &b, &c) != EOF)
 	{
 		double dt = pow(b, 2) - 4 * a * c;
