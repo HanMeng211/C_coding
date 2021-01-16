@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	for (int i = 10000; i <= 99999; i++)
+	{
+		int sum = (i % 10) * (i / 10) + (i % 100) * (i / 100) + (i % 1000) * (i / 1000) + (i % 10000) * (i / 10000);
+		if (sum == i)
+		{
+			printf("%d ", i);
+		}
+	}
+	printf("\n");
+	return 0;
+}
