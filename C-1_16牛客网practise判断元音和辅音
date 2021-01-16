@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char letter;
+	char arr[] = "AEIOUaeiou";
+	while (scanf("%c", &letter) != EOF)
+	{
+		int i = 0;
+        //解决换行输出结果问题
+		if (letter == '\n')
+		{
+			continue;
+		}
+		for ( i = 0; (size_t)i < strlen(arr); i++)
+		{
+			if (letter == arr[i])
+			{
+				printf("Vowel\n");
+				break;
+			}
+		}
+		if (i == (strlen(arr)))
+		{
+			printf("Consonant\n");
+		}
+	}
+	return 0;
+}
