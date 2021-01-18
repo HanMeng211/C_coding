@@ -1,0 +1,45 @@
+//memmove的使用
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int a[10] = { 1, 2, 3, 4, 5 };
+	memmove(a + 4, a, 20);
+	return 0;
+}
+
+
+
+
+
+//模拟实现memmove
+#include<stdio.h>
+#include<string.h>
+void* my_memmove(void* dst, const void* src, size_t num)
+{
+		char* ch_dst = (char*)dst;
+		const char* ch_src = (const char*)src;
+		//从后往前拷
+		if (ch_dst >= src && ch_dst <= ch_src + num)
+		{
+			for (int i = num - 1; i >= 0; --i)
+			{
+				ch_dst[i] = ch_src[i];
+			}
+		}
+		//从后往前拷
+		else
+		{
+			for (int i = 0; i < num; ++i)
+			{
+				ch_dst[i] = ch_src[i];
+			}
+		}
+		return dst;
+}
+int main()
+{
+	int a[10] = { 1, 2, 3, 4, 5 };
+	my_memmove(a + 4, a, 20);
+	return 0;
+}
