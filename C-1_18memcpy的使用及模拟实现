@@ -1,0 +1,46 @@
+//memcpy的使用
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char S1[20];
+	char S2[] = "abcd";
+	memcpy(S1, S2, sizeof(S2));
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//模拟实现memcpy
+#include<stdio.h>
+#include<string.h>
+void* my_memcpy(void* dst, const void* src, size_t num)
+{
+	char* ch_dst = (char*)dst;
+	const char* ch_src = (const char*)src;
+	for (size_t i = 0; i < num; ++i)
+	{
+		ch_dst[i] = ch_src[i];
+	}
+	return dst;
+}
+int main()
+{
+	char S1[20];
+	char S2[] = "abcd";
+	my_memcpy(S1, S2, sizeof(S2));
+	double S3[20];
+	double S4[] = {1.1,2.2,3.3,4.4,5.5};
+	my_memcpy(S3, S4, sizeof(S4));
+	return 0;
+}
