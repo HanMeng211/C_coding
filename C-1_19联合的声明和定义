@@ -1,0 +1,15 @@
+//联合的声明
+union Un
+{
+	int i;
+	char c;
+};
+int main()
+{
+	//联合变量的定义
+	union Un un;
+	printf("%d\n", sizeof(un));
+	un.i = 0x12345678;
+	un.c = 0x00;
+	return 0;
+}
