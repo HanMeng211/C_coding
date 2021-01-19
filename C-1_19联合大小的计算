@@ -1,0 +1,22 @@
+#include<stdio.h>
+union Un1
+{
+	char c[5];
+	int i;
+};
+union Un2
+{
+	short c[7];
+	int i;
+};
+int main()
+{
+	printf("%d\n", sizeof(union Un1));
+	printf("%d\n", sizeof(union Un2));
+}
+//在union Un1中char c[5]占5个字节，int i占4个字节所以联合的最大成员为5，
+//但union Un1中的最大对齐数为4,5不是最大对齐数4的整数倍，所以需要补3
+//个字节，union Un1的大小为8
+//在union Un2中short c[7]占14个字节，int i占4个字节所以联合的最大成员为14，
+//但union Un2中的最大对齐数为4,14不是最大对齐数4的整数倍，所以需要补2
+//个字节，union Un2的大小为16
