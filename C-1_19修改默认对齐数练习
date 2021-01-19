@@ -1,0 +1,59 @@
+#include<stdio.h>
+#pragma pack(2)//修改默认对齐数为2
+struct S1
+{
+	char c1;  // 1
+	int i;    // 4
+	char c2;  // 1
+};
+int main()
+{
+	printf("%d\n", sizeof(struct S1));
+	return 0;
+}
+
+
+
+
+
+
+//还原默认
+#include<stdio.h>
+#pragma pack(2)
+#pragma pack()//取消修改的默认对齐数，还原为默认
+struct S1
+{
+	char c1;  // 1
+	int i;    // 4
+	char c2;  // 1
+};
+int main()
+{
+	printf("%d\n", sizeof(struct S1));
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+//#pragma pack(1) 不对齐
+#include<stdio.h>
+#pragma pack(1)//相当于不对齐
+struct S1
+{
+	char c1;  // 1
+	int i;    // 4
+	char c2;  // 1
+};
+int main()
+{
+	printf("%d\n", sizeof(struct S1));
+	return 0;
+}
+
