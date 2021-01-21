@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int n, num;
+	int i = 0;
+	int sum = 0;
+	again:
+	scanf("%d", &n);
+	if (n >= 0 && n <= 50)
+	{
+		for (i = 0; i < n;++i)
+		{
+			scanf("%d", &num); //此处如果是scanf("%d ",&num)就必须打n+1个数因为中间必须有n个空格
+			sum += num;
+		}
+		printf("%d\n", sum);
+	}
+	else
+	{
+		goto again;
+	}
+	return 0;
+}
