@@ -23,13 +23,23 @@ typedef struct ContactBook
 	information array[CONTACT_BOOK_MAX];
 	int size; //实际储存联系人的数量
 }ContactBook;
+//初始化
 void ContactBookInit(ContactBook* pcb);
+//添加
 void ContactBookAdd(ContactBook* pcb, information* pc);
+//删除
 void ContactBookDel(ContactBook* pcb, char* name);
+//修改
 void ContactBookUpdate(ContactBook* pcb, information* pc);
-//返回结构体的信息
+//返回结构体的信息  查找
 information* ContactBookSearch(ContactBook* pcb, char* name);
+//展示
 void ContactBookPrintf(ContactBook* pcb);
+//写保存
+void ContactBookSaveText(ContactBook* pcb,const char* file);
+//读
+void ContactBookLoadText(ContactBook* pcb, const char* file);
+
 
 
 
@@ -139,7 +149,41 @@ information* ContactBookSearch(ContactBook* pcb, char* name)
 		printf("查无此人，查找失败!\n");
 		return NULL;
 }
+//写联系人信息并保存
+void ContactBookSaveText(ContactBook* pcb, const char* file)
+{
+	//打开文件，读
+	FILE* fin = fopen(file, "w");
+	if (fin == NULL)
+	{
+		//打印出错误原因
+		printf("打开文件失败!：%s\n", strerror(errno));
+		//非正常退出
+		exit(-1);
+	}
+	for (int i = 0; i < pcb->size; ++i)
+	{
+		fprintf(fin,"%s\n%s\n%s\n%d\n", pcb->array[i].name, pcb->array[i].address, pcb->array[i].telephone, pcb->array[i].age);
+	}
+	fclose(fin);
+}
+//读取保存到通讯录的联系人信息
+void ContactBookLoadText(ContactBook* pcb, const char* file)
+{
+	FILE* fin = fopen(file, "r");
+	if (fin == NULL)
+	{
+		printf("打开文件失败!：%s\n", strerror(errno));
+		exit(-1);
+	}
+	int i = 0;
+	while (fscanf(fin, "%s\n%s\n%s\n%d\n", pcb->array[i].name, pcb->array[i].address, pcb->array[i].telephone, &pcb->array[i].age) != EOF)
+	{
+		++i;
+		pcb->size++;
+	}
 
+}
 
 
 
@@ -152,13 +196,15 @@ void Menu()
 {
 	ContactBook cb;
 	ContactBookInit(&cb);
+	ContactBookLoadText(&cb, "ContactBook.text");
 	int option = 0;
 	do
 	{
 		printf("*****————————————————-***********\n");
 		printf("*****|1.添加联系人       2.删除联系人|***********\n");
 		printf("*****|3.修改联系人       4.查找联系人|***********\n");
-		printf("*****|5.展示联系人       0.退出      |***********\n");
+		printf("*****|5.展示联系人       6.保存信息  |***********\n");
+		printf("*****|0.退出                         |***********\n");
 		printf("*****————————————————-***********\n");
 		printf("*************************************************\n");
 		printf("请选择:>");
@@ -216,6 +262,11 @@ void Menu()
 		else if (option == 5)
 		{
 			ContactBookPrintf(&cb);
+		}
+		else if (option == 6)
+		{
+			ContactBookSaveText(&cb, "ContactBook.text");
+			printf("保存成功\n");
 		}
 		else if (option != 0)
 		{
