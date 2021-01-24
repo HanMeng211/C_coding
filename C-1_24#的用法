@@ -1,0 +1,21 @@
+//当预处理器搜索#define定义的符号时，字符串常量的内容并不会被搜索
+#include<stdio.h>
+#define PRINTF(format,value) printf("the value is "format"\n",value);
+int main()
+{
+	PRINTF("%d", 10);
+	return 0;
+}
+
+
+
+
+
+//如果想让字符串里的value也被替换用#value
+#include<stdio.h>
+#define PRINTF(format,value) printf("the "#value" is "format"\n",value);
+int main()
+{
+	PRINTF("%d", 10 + 3);//宏替换printf("the "10 + 3" is "%d"\n",13);
+	return 0;
+}
