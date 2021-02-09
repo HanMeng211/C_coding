@@ -4,7 +4,7 @@ int main()
     int num;
     while(scanf("%d",&num) != EOF)
     {
-        //控制上半部分的行
+        //控制上半部分的行数
         for(int i = 0;i <= num;++i)
         {
             //控制上半部分*的个数
@@ -19,7 +19,7 @@ int main()
             }
             printf("\n");
         }
-        //控制下半部分的行
+        //控制下半部分的行数
         for(int i = 0;i < num;++i)
         {
             //控制下半部分*的个数
