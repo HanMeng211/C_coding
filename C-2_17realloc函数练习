@@ -45,6 +45,7 @@ int main()
 
 // 情况2：原有空间之后没有足够大的空间
 
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
