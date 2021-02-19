@@ -27,7 +27,7 @@ int main()
 			printf("%d ", ps->arr[i]);
 		}
 	}
-	//释放内存
+	//释放内存 
 	free(ps->arr);
 	ps->arr = NULL;
 	free(ps);
