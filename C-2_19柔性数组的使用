@@ -3,7 +3,8 @@
 typedef struct S
 {
 	int i;
-	int arr[0];//柔性数组成员
+	//柔性数组成员
+	int arr[0];
 }S;
 int main()
 {
