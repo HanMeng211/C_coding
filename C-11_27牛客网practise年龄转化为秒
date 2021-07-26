@@ -1,8 +1,0 @@
-#include <stdio.h>
-int main()
-{
-	long long int age;
-	scanf("%lld", &age);
-	printf("%lld\n", 31560000 * age);
-	return 0;
-}
